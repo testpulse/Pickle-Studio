@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickleStudio", "PickleStudio\PickleStudio.csproj", "{AF5914B7-17C3-45AC-9907-3731B15BE96D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{26303032-9C59-4509-A1CD-90D384B964B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickleStudio.Core", "PickleStudio.Core\PickleStudio.Core.csproj", "{5EE95F08-CC0A-4F15-8B1E-5D1F9DA03804}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF5914B7-17C3-45AC-9907-3731B15BE96D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5914B7-17C3-45AC-9907-3731B15BE96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5914B7-17C3-45AC-9907-3731B15BE96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5914B7-17C3-45AC-9907-3731B15BE96D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE95F08-CC0A-4F15-8B1E-5D1F9DA03804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE95F08-CC0A-4F15-8B1E-5D1F9DA03804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE95F08-CC0A-4F15-8B1E-5D1F9DA03804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE95F08-CC0A-4F15-8B1E-5D1F9DA03804}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
