@@ -294,7 +294,7 @@ namespace PickleStudio.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Project Files (*.csproj)|*.csproj|Feature Files (*.feature)|*.feature.
+        ///   Looks up a localized string similar to Supported Files (.csproj, .feature)|*.csproj;*.feature.
         /// </summary>
         internal static string FileOpenFilter {
             get {

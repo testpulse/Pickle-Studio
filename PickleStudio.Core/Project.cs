@@ -18,7 +18,7 @@ namespace PickleStudio.Core
         private const string NoProjectName = "No Project";
 
         public event EventHandler<EventArgs<Project>> ProjectOpened;
-        public event EventHandler<EventArgs<Feature>> FeatureOpened;
+        public event EventHandler<EventArgs<Project, Feature>> FeatureOpened;
         public event EventHandler<EventArgs<Feature>> CurrentFeatureChanged;
         public event EventHandler<EventArgs<Feature>> FeatureContentChanged;
         public event EventHandler<EventArgs<Feature>> FeatureSaved;
@@ -71,8 +71,16 @@ namespace PickleStudio.Core
                 var feature = new Feature(filePath, OnFeatureContentChanged, OnFeatureSaved);
                 if (Name == NoProjectName)
                 {
-                    Features.Add(feature);
-                    FeatureOpened.Raise(this, feature);
+                    var existingFeatureIndex = Features.FindIndex(f => f.FilePath == filePath);
+                    if (existingFeatureIndex >= 0)
+                    {
+                        Features[existingFeatureIndex] = feature;
+                    }
+                    else
+                    {
+                        Features.Add(feature);
+                    }
+                    FeatureOpened.Raise(this, this, feature);
                     return;
                 }
                 else

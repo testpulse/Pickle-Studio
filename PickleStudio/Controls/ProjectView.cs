@@ -26,9 +26,10 @@ namespace PickleStudio.Controls
             state.Project.FeatureSaved += OnFeatureUpdate;
         }
 
-        private void OnFeatureOpened(object sender, EventArgs<Feature> e)
+        private void OnFeatureOpened(object sender, EventArgs<Project, Feature> e)
         {
-            OnFeatureUpdate(sender, e); // TODO test if this actually works, might need a full data refresh
+            olvProject.SetObjects(e.Item1.Features);
+            olvProject.SelectObject(e.Item2);
          }
 
         public void OnFeatureUpdate(object sender, EventArgs<Feature> e)

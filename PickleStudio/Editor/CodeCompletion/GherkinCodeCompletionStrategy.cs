@@ -26,8 +26,8 @@ namespace PickleStudio.Editor.CodeCompletion
             _editor = editor;
 
             state.Project.ProjectOpened += OnProjectOpened;
-            state.Project.FeatureOpened += OnFeatureUpdate;
-            state.Project.FeatureSaved += OnFeatureUpdate;
+            state.Project.FeatureOpened += OnFeatureOpened;
+            state.Project.FeatureSaved += OnFeatureSaved;
 
             editor.TextArea.TextEntered += OnTextEntered;
             editor.TextArea.TextEntering += OnTextEntering;
@@ -42,9 +42,19 @@ namespace PickleStudio.Editor.CodeCompletion
             }
         }
 
-        private void OnFeatureUpdate(object sender, EventArgs<Feature> e)
+        private void OnFeatureOpened(object sender, EventArgs<Project, Feature> e)
         {
-            _steps.RefreshSteps(e.Item);
+            RefreshSteps(e.Item2);
+        }
+
+        private void OnFeatureSaved(object sender, EventArgs<Feature> e)
+        {
+            RefreshSteps(e.Item);
+        }
+
+        private void RefreshSteps(Feature feature)
+        {
+            _steps.RefreshSteps(feature);
         }
 
         private void OnTextEntered(object sender, TextCompositionEventArgs e)
