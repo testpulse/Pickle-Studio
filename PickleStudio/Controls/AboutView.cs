@@ -52,7 +52,7 @@ namespace PickleStudio.Controls
             get 
             { 
                 var version = Version.Parse(Application.ProductVersion);
-                return string.Format("About {0} v{1}.{2}", Application.ProductName, version.Major, version.Minor); 
+                return string.Format("About {0} v{1}.{2}.{3}", Application.ProductName, version.Major, version.Minor, version.Build); 
             }
         }
 
