@@ -226,9 +226,6 @@
   <data name="HelpAboutDialogText" xml:space="preserve">
     <value>This application makes use of the following third party components:</value>
   </data>
-  <data name="HelpAboutDialogTitle" xml:space="preserve">
-    <value>About Pickle Studio</value>
-  </data>
   <data name="HelpAboutImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -237,9 +234,6 @@
   </data>
   <data name="HelpAboutToolTipText" xml:space="preserve">
     <value>About</value>
-  </data>
-  <data name="MainTitle" xml:space="preserve">
-    <value>Pickle Studio</value>
   </data>
   <data name="NoProjectName" xml:space="preserve">
     <value>No Project</value>

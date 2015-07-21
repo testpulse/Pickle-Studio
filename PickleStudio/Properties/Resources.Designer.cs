@@ -396,15 +396,6 @@ namespace PickleStudio.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About Pickle Studio.
-        /// </summary>
-        internal static string HelpAboutDialogTitle {
-            get {
-                return ResourceManager.GetString("HelpAboutDialogTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap HelpAboutImage {
@@ -429,15 +420,6 @@ namespace PickleStudio.Properties {
         internal static string HelpAboutToolTipText {
             get {
                 return ResourceManager.GetString("HelpAboutToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pickle Studio.
-        /// </summary>
-        internal static string MainTitle {
-            get {
-                return ResourceManager.GetString("MainTitle", resourceCulture);
             }
         }
         

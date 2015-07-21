@@ -25,7 +25,7 @@ namespace PickleStudio
         {
             InitializeComponent();
 
-            Text = Resources.MainTitle;
+            Text = Application.ProductName;
             splitContainer1.Panel2Collapsed = true;
 
             RegisterCommands();

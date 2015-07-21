@@ -5,6 +5,7 @@ using PickleStudio.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace PickleStudio.Controls
@@ -48,7 +49,11 @@ namespace PickleStudio.Controls
 
         public string Title
         {
-            get { return Resources.HelpAboutDialogTitle; }
+            get 
+            { 
+                var version = Version.Parse(Application.ProductVersion);
+                return string.Format("About {0} v{1}.{2}", Application.ProductName, version.Major, version.Minor); 
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
