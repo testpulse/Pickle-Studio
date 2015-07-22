@@ -1,5 +1,5 @@
-# Pickle-Studio
-Gherkin feature editor with SpecFlow integration
+# Pickle Studio
+Gherkin feature editor for Windows with SpecFlow integration
 
 ## Current Features
 
