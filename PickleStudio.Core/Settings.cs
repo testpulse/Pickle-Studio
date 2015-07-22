@@ -17,7 +17,7 @@ namespace PickleStudio.Core
         public ProjectSettings Project { get; private set; }
         public EditorSettings Editor { get; private set; }
 
-        private const string SettingsFileName = "PickleStudio.settings";
+        public const string FileName = "PickleStudio.settings";
 
         private readonly Lazy<Serializer> _serializer = new Lazy<Serializer>(() => new Serializer());
 
@@ -37,13 +37,13 @@ namespace PickleStudio.Core
         {
             Saving.Raise(this);
 
-            _serializer.Value.SerializeToFile(this, SettingsFileName);
+            _serializer.Value.SerializeToFile(this, FileName);
         }
 
         public void Load()
         {
-            var settings = (File.Exists(SettingsFileName)) ?
-                _serializer.Value.DeserializeFromFile<Settings>(SettingsFileName) :
+            var settings = (File.Exists(FileName)) ?
+                _serializer.Value.DeserializeFromFile<Settings>(FileName) :
                 new Settings();
 
             Window = settings.Window;
