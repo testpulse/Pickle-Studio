@@ -2,6 +2,7 @@
 using PickleStudio.Core.Helpers;
 using PickleStudio.Core.Interfaces;
 using PickleStudio.Resources;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -21,7 +22,9 @@ namespace PickleStudio.Controls
             colName.ImageGetter = (f) => ((Feature)f).IsChanged ? 1 : 0;
 
             state.Project.ProjectOpened += OnProjectOpened;
+            state.Project.ProjectClosed += OnProjectOrFeatureClosed;
             state.Project.FeatureOpened += OnFeatureOpened;
+            state.Project.FeatureClosed += OnProjectOrFeatureClosed;
             state.Project.FeatureContentChanged += OnFeatureUpdate;
             state.Project.FeatureSaved += OnFeatureUpdate;
         }
@@ -39,15 +42,25 @@ namespace PickleStudio.Controls
 
         private void OnProjectOpened(object sender, EventArgs<Project> e)
         {
-            olvProject.SetObjects(e.Item.Features);
-            var feature = e.Item.Features.FirstOrDefault();
+            RefreshView(e.Item);
+        }
+
+        private void OnProjectOrFeatureClosed(object sender, EventArgs e)
+        {
+            RefreshView(_state.Project);
+        }
+
+        private void RefreshView(Project project)
+        {
+            olvProject.SetObjects(project.Features);
+            var feature = project.Features.FirstOrDefault();
             if (feature != null)
             {
                 olvProject.SelectObject(feature);
             }
-            else 
+            else
             {
-                e.Item.CurrentFeature = null;
+                project.CurrentFeature = null;
             }
         }
 

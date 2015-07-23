@@ -18,7 +18,9 @@ namespace PickleStudio.Core
         private const string NoProjectName = "No Project";
 
         public event EventHandler<EventArgs<Project>> ProjectOpened;
+        public event EventHandler ProjectClosed;
         public event EventHandler<EventArgs<Project, Feature>> FeatureOpened;
+        public event EventHandler FeatureClosed;
         public event EventHandler<EventArgs<Feature>> CurrentFeatureChanged;
         public event EventHandler<EventArgs<Feature>> FeatureContentChanged;
         public event EventHandler<EventArgs<Feature>> FeatureSaved;
@@ -104,6 +106,29 @@ namespace PickleStudio.Core
             ProjectOpened.Raise(this, this);
         }
 
+        public void Close()
+        {
+            if (Name == NoProjectName)
+            {
+                if (CurrentFeature == null) return;
+
+                Features.Remove(CurrentFeature);
+                if (Features.Count > 0)
+                    CurrentFeature = Features[0];
+                else
+                    CurrentFeature = null;
+                FeatureClosed.Raise(this);
+            }
+            else
+            {
+                Name = NoProjectName;
+                FilePath = string.Empty;
+                Features.Clear();
+                CurrentFeature = null;
+                ProjectClosed.Raise(this);
+            }
+        }
+
         public void RunTests()
         {
             var project = GetProject(FilePath);
@@ -133,6 +158,7 @@ namespace PickleStudio.Core
                 Command.EditPaste.SetEnabled(canEdit);
                 Command.EditUndo.SetEnabled(canEdit);
                 Command.EditRedo.SetEnabled(canEdit);
+                Command.FileClose.SetEnabled(canEdit);
                 CurrentFeatureChanged.Raise(this, CurrentFeature);
             }
         }

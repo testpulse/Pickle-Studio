@@ -219,4 +219,10 @@
   <data name="TestRunToolTipText" xml:space="preserve">
     <value>Run tests</value>
   </data>
+  <data name="FileCloseText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="FileCloseToolTipText" xml:space="preserve">
+    <value>Close current project or feature</value>
+  </data>
 </root>

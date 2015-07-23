@@ -214,6 +214,24 @@ namespace PickleStudio.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string FileCloseText {
+            get {
+                return ResourceManager.GetString("FileCloseText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close current project or feature.
+        /// </summary>
+        public static string FileCloseToolTipText {
+            get {
+                return ResourceManager.GetString("FileCloseToolTipText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Supported Files (.csproj, .feature)|*.csproj;*.feature.
         /// </summary>
         public static string FileOpenFilter {

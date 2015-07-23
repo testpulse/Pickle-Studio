@@ -181,6 +181,7 @@
     <Content Include="FodyWeavers.xml" />
     <Content Include="PickleStudio.ico" />
     <Content Include="Resources\Images\HelpAbout.png" />
+    <Content Include="Resources\Images\FileClose.png" />
     <Content Include="Resources\Images\TestRun.png" />
     <Content Include="Resources\Images\TestFailure.png" />
     <Content Include="Resources\Images\TestSucces.png" />

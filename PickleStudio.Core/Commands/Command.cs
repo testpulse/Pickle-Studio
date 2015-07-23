@@ -7,6 +7,7 @@ namespace PickleStudio.Core.Commands
         FileOpen,
         FileSave,
         FileSaveAll,
+        FileClose,
         SettingsLoad,
         SettingsSave,
         EditorWordWrap,

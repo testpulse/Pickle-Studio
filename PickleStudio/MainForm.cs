@@ -44,6 +44,7 @@ namespace PickleStudio
             Command.FileOpen.Register(new FileOpenCommand(State));
             Command.FileSave.Register(new FileSaveCommand(State));
             Command.FileSaveAll.Register(new FileSaveAllCommand(State));
+            Command.FileClose.Register(new DelegateCommand(() => State.Project.Close(), Strings.FileCloseText, Images.FileClose, Strings.FileCloseToolTipText, false));
             Command.SettingsLoad.Register(new DelegateCommand(() => State.Settings.Load(), Strings.SettingsLoadText, null, Strings.SettingsLoadToolTipText));
             Command.SettingsSave.Register(new DelegateCommand(() => State.Settings.Save(), Strings.SettingsSaveText, null, Strings.SettingsSaveToolTipText));
             Command.EditCopy.Register(new DelegateCommand(() => State.Editor.Copy(), Strings.EditCopyText, Images.EditCopy, Strings.EditCopyToolTipText, false));
@@ -86,7 +87,7 @@ namespace PickleStudio
                 .AddToolStrip(CommandGroup.Help, Command.HelpAbout)
                 .AddToolStrip(CommandGroup.Editor, Command.EditorWordWrap, Command.EditorDisplayLineNumbers, Command.EditorDisplaySymbols)
                 .AddToolStrip(CommandGroup.Edit, Command.EditCopy, Command.EditCut, Command.EditPaste, Command.None, Command.EditUndo, Command.EditRedo)
-                .AddToolStrip(CommandGroup.File, Command.FileOpen, Command.FileSave, Command.FileSaveAll);
+                .AddToolStrip(CommandGroup.File, Command.FileOpen, Command.FileSave, Command.FileSaveAll, Command.FileClose);
         }
 
         private void LoadSettings()

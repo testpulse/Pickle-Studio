@@ -143,6 +143,16 @@ namespace PickleStudio.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FileClose {
+            get {
+                object obj = ResourceManager.GetObject("FileClose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FileOpen {
             get {
                 object obj = ResourceManager.GetObject("FileOpen", resourceCulture);
