@@ -1,7 +1,7 @@
 ﻿using PickleStudio.Core;
 using PickleStudio.Core.Helpers;
 using PickleStudio.Core.Interfaces;
-using PickleStudio.Properties;
+using PickleStudio.Resources;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -54,10 +54,10 @@ namespace PickleStudio.Controls
         private ImageList GetImageList()
         {
             var imageList = new ImageList();
-            imageList.Images.Add(Resources.StatusUnknownImage);
-            imageList.Images.Add(Resources.StatusUnsavedImage);
-            imageList.Images.Add(Resources.StatusSuccessImage);
-            imageList.Images.Add(Resources.StatusFailureImage);
+            imageList.Images.Add(Images.StatusUnknown);
+            imageList.Images.Add(Images.StatusUnsaved);
+            imageList.Images.Add(Images.StatusSuccess);
+            imageList.Images.Add(Images.StatusFailure);
             return imageList;
         }
 

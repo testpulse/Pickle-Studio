@@ -138,6 +138,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controls\AboutView.resx">
       <DependentUpon>AboutView.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,26 +163,15 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Include="Resources\Images.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -181,25 +180,25 @@
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
     <Content Include="PickleStudio.ico" />
-    <Content Include="Resources\about.png" />
-    <Content Include="Resources\test-run.png" />
-    <Content Include="Resources\test-failure.png" />
-    <Content Include="Resources\test-success.png" />
-    <Content Include="Resources\word-wrap.png" />
-    <Content Include="Resources\display-line-numbers.png" />
-    <Content Include="Resources\undo.png" />
-    <Content Include="Resources\redo.png" />
-    <Content Include="Resources\paste.png" />
-    <Content Include="Resources\save.png" />
-    <Content Include="Resources\save-all.png" />
-    <Content Include="Resources\copy.png" />
-    <Content Include="Resources\display-line-end-symbols.png" />
-    <Content Include="Resources\open.png" />
-    <Content Include="Resources\cut.png" />
-    <Content Include="Resources\status-unsaved.png" />
-    <Content Include="Resources\status-failure.png" />
-    <Content Include="Resources\status-unknown.png" />
-    <Content Include="Resources\status-success.png" />
+    <Content Include="Resources\Images\HelpAbout.png" />
+    <Content Include="Resources\Images\TestRun.png" />
+    <Content Include="Resources\Images\TestFailure.png" />
+    <Content Include="Resources\Images\TestSucces.png" />
+    <Content Include="Resources\Images\EditorWordWrap.png" />
+    <Content Include="Resources\Images\EditorDisplayLineNumbers.png" />
+    <Content Include="Resources\Images\EditUndo.png" />
+    <Content Include="Resources\Images\EditRedo.png" />
+    <Content Include="Resources\Images\EditPaste.png" />
+    <Content Include="Resources\Images\FileSave.png" />
+    <Content Include="Resources\Images\FileSaveAll.png" />
+    <Content Include="Resources\Images\EditCopy.png" />
+    <Content Include="Resources\Images\EditorDisplaySymbols.png" />
+    <Content Include="Resources\Images\FileOpen.png" />
+    <Content Include="Resources\Images\EditCut.png" />
+    <Content Include="Resources\Images\StatusUnsaved.png" />
+    <Content Include="Resources\Images\StatusFailure.png" />
+    <Content Include="Resources\Images\StatusUnknown.png" />
+    <Content Include="Resources\Images\StatusSuccess.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

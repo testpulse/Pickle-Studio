@@ -1,6 +1,6 @@
 ﻿using PickleStudio.Core;
 using PickleStudio.Core.Interfaces;
-using PickleStudio.Properties;
+using PickleStudio.Resources;
 using System.IO;
 using System.Windows.Forms;
 
@@ -14,10 +14,10 @@ namespace PickleStudio.Commands
         {
             _state = state;
 
-            Text = Resources.FileOpenText;
-            Image = Resources.FileOpenImage;
+            Text = Strings.FileOpenText;
+            Image = Images.FileOpen;
             Enabled = true;
-            ToolTipText = Resources.FileOpenToolTipText;
+            ToolTipText = Strings.FileOpenToolTipText;
         }
 
         protected override void DoExecute(params string[] args)
@@ -30,7 +30,7 @@ namespace PickleStudio.Commands
             else
             {
                 var dialog = new OpenFileDialog();
-                dialog.Filter = Resources.FileOpenFilter;
+                dialog.Filter = Strings.FileOpenFilter;
                 dialog.InitialDirectory = _state.Settings.Project.InitialDirectory;
                 if (dialog.ShowDialog() != DialogResult.OK) return;
                 fileName = dialog.FileName;

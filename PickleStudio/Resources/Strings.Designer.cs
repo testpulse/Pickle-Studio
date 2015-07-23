@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PickleStudio.Properties {
+namespace PickleStudio.Resources {
     using System;
     
     
@@ -22,24 +22,24 @@ namespace PickleStudio.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Strings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Strings() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PickleStudio.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PickleStudio.Resources.Strings", typeof(Strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace PickleStudio.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,26 +63,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
-        internal static string CloseButtonText {
+        public static string CloseButtonText {
             get {
                 return ResourceManager.GetString("CloseButtonText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EditCopyImage {
-            get {
-                object obj = ResourceManager.GetObject("EditCopyImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
-        internal static string EditCopyText {
+        public static string EditCopyText {
             get {
                 return ResourceManager.GetString("EditCopyText", resourceCulture);
             }
@@ -91,26 +81,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
-        internal static string EditCopyToolTipText {
+        public static string EditCopyToolTipText {
             get {
                 return ResourceManager.GetString("EditCopyToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EditCutImage {
-            get {
-                object obj = ResourceManager.GetObject("EditCutImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cut.
         /// </summary>
-        internal static string EditCutText {
+        public static string EditCutText {
             get {
                 return ResourceManager.GetString("EditCutText", resourceCulture);
             }
@@ -119,26 +99,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Cut.
         /// </summary>
-        internal static string EditCutToolTipText {
+        public static string EditCutToolTipText {
             get {
                 return ResourceManager.GetString("EditCutToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EditorDisplayLineNumbersImage {
-            get {
-                object obj = ResourceManager.GetObject("EditorDisplayLineNumbersImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Display Line Numbers.
         /// </summary>
-        internal static string EditorDisplayLineNumbersText {
+        public static string EditorDisplayLineNumbersText {
             get {
                 return ResourceManager.GetString("EditorDisplayLineNumbersText", resourceCulture);
             }
@@ -147,26 +117,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Toggle display of line numbers.
         /// </summary>
-        internal static string EditorDisplayLineNumbersToolTipText {
+        public static string EditorDisplayLineNumbersToolTipText {
             get {
                 return ResourceManager.GetString("EditorDisplayLineNumbersToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EditorDisplaySymbolsImage {
-            get {
-                object obj = ResourceManager.GetObject("EditorDisplaySymbolsImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Display Symbols.
         /// </summary>
-        internal static string EditorDisplaySymbolsText {
+        public static string EditorDisplaySymbolsText {
             get {
                 return ResourceManager.GetString("EditorDisplaySymbolsText", resourceCulture);
             }
@@ -175,26 +135,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Toggle display of non-character symbols.
         /// </summary>
-        internal static string EditorDisplaySymbolsToolTipText {
+        public static string EditorDisplaySymbolsToolTipText {
             get {
                 return ResourceManager.GetString("EditorDisplaySymbolsToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EditorWordWrapImage {
-            get {
-                object obj = ResourceManager.GetObject("EditorWordWrapImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Word Wrap.
         /// </summary>
-        internal static string EditorWordWrapText {
+        public static string EditorWordWrapText {
             get {
                 return ResourceManager.GetString("EditorWordWrapText", resourceCulture);
             }
@@ -203,26 +153,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Toggle word wrap.
         /// </summary>
-        internal static string EditorWordWrapToolTipText {
+        public static string EditorWordWrapToolTipText {
             get {
                 return ResourceManager.GetString("EditorWordWrapToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EditPasteImage {
-            get {
-                object obj = ResourceManager.GetObject("EditPasteImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Paste.
         /// </summary>
-        internal static string EditPasteText {
+        public static string EditPasteText {
             get {
                 return ResourceManager.GetString("EditPasteText", resourceCulture);
             }
@@ -231,26 +171,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Paste.
         /// </summary>
-        internal static string EditPasteToolTipText {
+        public static string EditPasteToolTipText {
             get {
                 return ResourceManager.GetString("EditPasteToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EditRedoImage {
-            get {
-                object obj = ResourceManager.GetObject("EditRedoImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Redo.
         /// </summary>
-        internal static string EditRedoText {
+        public static string EditRedoText {
             get {
                 return ResourceManager.GetString("EditRedoText", resourceCulture);
             }
@@ -259,26 +189,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Redo.
         /// </summary>
-        internal static string EditRedoToolTipText {
+        public static string EditRedoToolTipText {
             get {
                 return ResourceManager.GetString("EditRedoToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EditUndoImage {
-            get {
-                object obj = ResourceManager.GetObject("EditUndoImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Undo.
         /// </summary>
-        internal static string EditUndoText {
+        public static string EditUndoText {
             get {
                 return ResourceManager.GetString("EditUndoText", resourceCulture);
             }
@@ -287,7 +207,7 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Undo.
         /// </summary>
-        internal static string EditUndoToolTipText {
+        public static string EditUndoToolTipText {
             get {
                 return ResourceManager.GetString("EditUndoToolTipText", resourceCulture);
             }
@@ -296,26 +216,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Supported Files (.csproj, .feature)|*.csproj;*.feature.
         /// </summary>
-        internal static string FileOpenFilter {
+        public static string FileOpenFilter {
             get {
                 return ResourceManager.GetString("FileOpenFilter", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FileOpenImage {
-            get {
-                object obj = ResourceManager.GetObject("FileOpenImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Open.
         /// </summary>
-        internal static string FileOpenText {
+        public static string FileOpenText {
             get {
                 return ResourceManager.GetString("FileOpenText", resourceCulture);
             }
@@ -324,26 +234,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Open project or feature file.
         /// </summary>
-        internal static string FileOpenToolTipText {
+        public static string FileOpenToolTipText {
             get {
                 return ResourceManager.GetString("FileOpenToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FileSaveAllImage {
-            get {
-                object obj = ResourceManager.GetObject("FileSaveAllImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Save All.
         /// </summary>
-        internal static string FileSaveAllText {
+        public static string FileSaveAllText {
             get {
                 return ResourceManager.GetString("FileSaveAllText", resourceCulture);
             }
@@ -352,26 +252,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Save all files.
         /// </summary>
-        internal static string FileSaveAllToolTipText {
+        public static string FileSaveAllToolTipText {
             get {
                 return ResourceManager.GetString("FileSaveAllToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FileSaveImage {
-            get {
-                object obj = ResourceManager.GetObject("FileSaveImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
-        internal static string FileSaveText {
+        public static string FileSaveText {
             get {
                 return ResourceManager.GetString("FileSaveText", resourceCulture);
             }
@@ -380,7 +270,7 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Save current file.
         /// </summary>
-        internal static string FileSaveToolTipText {
+        public static string FileSaveToolTipText {
             get {
                 return ResourceManager.GetString("FileSaveToolTipText", resourceCulture);
             }
@@ -389,26 +279,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to This application makes use of the following third party components:.
         /// </summary>
-        internal static string HelpAboutDialogText {
+        public static string HelpAboutDialogText {
             get {
                 return ResourceManager.GetString("HelpAboutDialogText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap HelpAboutImage {
-            get {
-                object obj = ResourceManager.GetObject("HelpAboutImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
-        internal static string HelpAboutText {
+        public static string HelpAboutText {
             get {
                 return ResourceManager.GetString("HelpAboutText", resourceCulture);
             }
@@ -417,7 +297,7 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
-        internal static string HelpAboutToolTipText {
+        public static string HelpAboutToolTipText {
             get {
                 return ResourceManager.GetString("HelpAboutToolTipText", resourceCulture);
             }
@@ -426,7 +306,7 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No Project.
         /// </summary>
-        internal static string NoProjectName {
+        public static string NoProjectName {
             get {
                 return ResourceManager.GetString("NoProjectName", resourceCulture);
             }
@@ -435,7 +315,7 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Load Settings.
         /// </summary>
-        internal static string SettingsLoadText {
+        public static string SettingsLoadText {
             get {
                 return ResourceManager.GetString("SettingsLoadText", resourceCulture);
             }
@@ -444,7 +324,7 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Load settings.
         /// </summary>
-        internal static string SettingsLoadToolTipText {
+        public static string SettingsLoadToolTipText {
             get {
                 return ResourceManager.GetString("SettingsLoadToolTipText", resourceCulture);
             }
@@ -453,7 +333,7 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Save Settings.
         /// </summary>
-        internal static string SettingsSaveText {
+        public static string SettingsSaveText {
             get {
                 return ResourceManager.GetString("SettingsSaveText", resourceCulture);
             }
@@ -462,76 +342,16 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Save settings.
         /// </summary>
-        internal static string SettingsSaveToolTipText {
+        public static string SettingsSaveToolTipText {
             get {
                 return ResourceManager.GetString("SettingsSaveToolTipText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap StatusFailureImage {
-            get {
-                object obj = ResourceManager.GetObject("StatusFailureImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap StatusSuccessImage {
-            get {
-                object obj = ResourceManager.GetObject("StatusSuccessImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap StatusUnknownImage {
-            get {
-                object obj = ResourceManager.GetObject("StatusUnknownImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap StatusUnsavedImage {
-            get {
-                object obj = ResourceManager.GetObject("StatusUnsavedImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TestFailureImage {
-            get {
-                object obj = ResourceManager.GetObject("TestFailureImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TestRunImage {
-            get {
-                object obj = ResourceManager.GetObject("TestRunImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Run.
         /// </summary>
-        internal static string TestRunText {
+        public static string TestRunText {
             get {
                 return ResourceManager.GetString("TestRunText", resourceCulture);
             }
@@ -540,19 +360,9 @@ namespace PickleStudio.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Run tests.
         /// </summary>
-        internal static string TestRunToolTipText {
+        public static string TestRunToolTipText {
             get {
                 return ResourceManager.GetString("TestRunToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TestSuccessImage {
-            get {
-                object obj = ResourceManager.GetObject("TestSuccessImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

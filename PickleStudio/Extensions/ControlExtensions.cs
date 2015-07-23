@@ -1,5 +1,4 @@
-﻿using PickleStudio.Commands;
-using PickleStudio.Core.Commands;
+﻿using PickleStudio.Core.Commands;
 using PickleStudio.Interfaces;
 using System.Drawing;
 using System.Linq;
@@ -35,9 +34,9 @@ namespace PickleStudio.Extensions
             return true;
         }
 
-        public static ToolStripContainer AddToolStrip(this ToolStripContainer container, params Command[] commands)
+        public static ToolStripContainer AddToolStrip(this ToolStripContainer container, CommandGroup group, params Command[] commands)
         {
-            var ts = commands.Aggregate(new ToolStrip(), (b, c) => b.AddToolStripItem(c));
+            var ts = commands.Aggregate(new ToolStrip { Name = "tsp" + group.ToString() }, (b, c) => b.AddToolStripItem(c));
 
             container.TopToolStripPanel.Controls.Add(ts);
 
@@ -56,6 +55,7 @@ namespace PickleStudio.Extensions
                 default:
                     item = new ToolStripButton
                     {
+                        Name = "tbb" + type.ToString(),
                         CheckOnClick = (command != null && command.CanToggle),
                         Checked = (command != null && command.IsToggled)
                     };

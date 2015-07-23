@@ -15,7 +15,7 @@ namespace PickleStudio.Controls
             InitializeComponent();
 
             tscTest
-                .AddToolStrip(Command.TestRun);
+                .AddToolStrip(CommandGroup.Test, Command.TestRun);
 
             //Program.State.Project.Opened += OnProjectOpened;
             //Program.State.Project.TestRunFinishedWithException += OnTestRunFinishedWithException;

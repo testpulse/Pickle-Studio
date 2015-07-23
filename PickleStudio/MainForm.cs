@@ -4,7 +4,7 @@ using PickleStudio.Core;
 using PickleStudio.Core.Commands;
 using PickleStudio.Core.Interfaces;
 using PickleStudio.Extensions;
-using PickleStudio.Properties;
+using PickleStudio.Resources;
 using System;
 using System.Windows.Forms;
 
@@ -44,17 +44,17 @@ namespace PickleStudio
             Command.FileOpen.Register(new FileOpenCommand(State));
             Command.FileSave.Register(new FileSaveCommand(State));
             Command.FileSaveAll.Register(new FileSaveAllCommand(State));
-            Command.SettingsLoad.Register(new DelegateCommand(() => State.Settings.Load(), Resources.SettingsLoadText, null, Resources.SettingsLoadToolTipText));
-            Command.SettingsSave.Register(new DelegateCommand(() => State.Settings.Save(), Resources.SettingsSaveText, null, Resources.SettingsSaveToolTipText));
-            Command.EditCopy.Register(new DelegateCommand(() => State.Editor.Copy(), Resources.EditCopyText, Resources.EditCopyImage, Resources.EditCopyToolTipText, false));
-            Command.EditCut.Register(new DelegateCommand(() => State.Editor.Cut(), Resources.EditCutText, Resources.EditCutImage, Resources.EditCutToolTipText, false));
-            Command.EditPaste.Register(new DelegateCommand(() => State.Editor.Paste(), Resources.EditPasteText, Resources.EditPasteImage, Resources.EditPasteToolTipText, false));
-            Command.EditUndo.Register(new DelegateCommand(() => State.Editor.Undo(), Resources.EditUndoText, Resources.EditUndoImage, Resources.EditUndoToolTipText, false));
-            Command.EditRedo.Register(new DelegateCommand(() => State.Editor.Redo(), Resources.EditRedoText, Resources.EditRedoImage, Resources.EditRedoToolTipText, false));
-            Command.EditorWordWrap.Register(new ToggleCommand(() => State.Settings.Editor.WordWrap, (a) => State.Settings.Editor.WordWrap = a, Resources.EditorWordWrapText, Resources.EditorWordWrapImage, Resources.EditorWordWrapToolTipText));
-            Command.EditorDisplayLineNumbers.Register(new ToggleCommand(() => State.Settings.Editor.DisplayLineNumbers, (a) => State.Settings.Editor.DisplayLineNumbers = a, Resources.EditorDisplayLineNumbersText, Resources.EditorDisplayLineNumbersImage, Resources.EditorDisplayLineNumbersToolTipText));
-            Command.EditorDisplaySymbols.Register(new ToggleCommand(() => State.Settings.Editor.DisplaySymbols, (a) => State.Settings.Editor.DisplaySymbols = a, Resources.EditorDisplaySymbolsText, Resources.EditorDisplaySymbolsImage, Resources.EditorDisplaySymbolsToolTipText));
-            Command.HelpAbout.Register(new DelegateCommand(() => new AboutView().ShowDialog(), Resources.HelpAboutText, Resources.HelpAboutImage, Resources.HelpAboutToolTipText));
+            Command.SettingsLoad.Register(new DelegateCommand(() => State.Settings.Load(), Strings.SettingsLoadText, null, Strings.SettingsLoadToolTipText));
+            Command.SettingsSave.Register(new DelegateCommand(() => State.Settings.Save(), Strings.SettingsSaveText, null, Strings.SettingsSaveToolTipText));
+            Command.EditCopy.Register(new DelegateCommand(() => State.Editor.Copy(), Strings.EditCopyText, Images.EditCopy, Strings.EditCopyToolTipText, false));
+            Command.EditCut.Register(new DelegateCommand(() => State.Editor.Cut(), Strings.EditCutText, Images.EditCut, Strings.EditCutToolTipText, false));
+            Command.EditPaste.Register(new DelegateCommand(() => State.Editor.Paste(), Strings.EditPasteText, Images.EditPaste, Strings.EditPasteToolTipText, false));
+            Command.EditUndo.Register(new DelegateCommand(() => State.Editor.Undo(), Strings.EditUndoText, Images.EditUndo, Strings.EditUndoToolTipText, false));
+            Command.EditRedo.Register(new DelegateCommand(() => State.Editor.Redo(), Strings.EditRedoText, Images.EditRedo, Strings.EditRedoToolTipText, false));
+            Command.EditorWordWrap.Register(new ToggleCommand(() => State.Settings.Editor.WordWrap, (a) => State.Settings.Editor.WordWrap = a, Strings.EditorWordWrapText, Images.EditorWordWrap, Strings.EditorWordWrapToolTipText));
+            Command.EditorDisplayLineNumbers.Register(new ToggleCommand(() => State.Settings.Editor.DisplayLineNumbers, (a) => State.Settings.Editor.DisplayLineNumbers = a, Strings.EditorDisplayLineNumbersText, Images.EditorDisplayLineNumbers, Strings.EditorDisplayLineNumbersToolTipText));
+            Command.EditorDisplaySymbols.Register(new ToggleCommand(() => State.Settings.Editor.DisplaySymbols, (a) => State.Settings.Editor.DisplaySymbols = a, Strings.EditorDisplaySymbolsText, Images.EditorDisplaySymbols, Strings.EditorDisplaySymbolsToolTipText));
+            Command.HelpAbout.Register(new DelegateCommand(() => new AboutView().ShowDialog(), Strings.HelpAboutText, Images.HelpAbout, Strings.HelpAboutToolTipText));
             Command.TestRun.Register(new TestRunCommand(State));
         }
 
@@ -83,10 +83,10 @@ namespace PickleStudio
         {
             // build in opposite to desired order becauses it's a pain to re-arrange these things.  Need to revisit.
             tscMain
-                .AddToolStrip(Command.HelpAbout)
-                .AddToolStrip(Command.EditorWordWrap, Command.EditorDisplayLineNumbers, Command.EditorDisplaySymbols)
-                .AddToolStrip(Command.EditCopy, Command.EditCut, Command.EditPaste, Command.None, Command.EditUndo, Command.EditRedo)
-                .AddToolStrip(Command.FileOpen, Command.FileSave, Command.FileSaveAll);
+                .AddToolStrip(CommandGroup.Help, Command.HelpAbout)
+                .AddToolStrip(CommandGroup.Editor, Command.EditorWordWrap, Command.EditorDisplayLineNumbers, Command.EditorDisplaySymbols)
+                .AddToolStrip(CommandGroup.Edit, Command.EditCopy, Command.EditCut, Command.EditPaste, Command.None, Command.EditUndo, Command.EditRedo)
+                .AddToolStrip(CommandGroup.File, Command.FileOpen, Command.FileSave, Command.FileSaveAll);
         }
 
         private void LoadSettings()

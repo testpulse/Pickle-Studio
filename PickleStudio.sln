@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickleStudio.UnitTests", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickleStudio.UiTests", "PickleStudio.UiTests\PickleStudio.UiTests.csproj", "{B5A8EFCD-F5A6-480D-AEF7-25D227F1CE0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickleStudio.TestData", "PickleStudio.TestData\PickleStudio.TestData.csproj", "{60B20EAA-2C3B-4694-83A7-C0EE9718C039}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{B5A8EFCD-F5A6-480D-AEF7-25D227F1CE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5A8EFCD-F5A6-480D-AEF7-25D227F1CE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5A8EFCD-F5A6-480D-AEF7-25D227F1CE0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60B20EAA-2C3B-4694-83A7-C0EE9718C039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60B20EAA-2C3B-4694-83A7-C0EE9718C039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60B20EAA-2C3B-4694-83A7-C0EE9718C039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60B20EAA-2C3B-4694-83A7-C0EE9718C039}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +50,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E24C81EA-FD36-4EE5-AFCE-003A29E4513B} = {B4418E76-34EC-4D19-9C49-C267B62C1404}
 		{B5A8EFCD-F5A6-480D-AEF7-25D227F1CE0C} = {B4418E76-34EC-4D19-9C49-C267B62C1404}
+		{60B20EAA-2C3B-4694-83A7-C0EE9718C039} = {B4418E76-34EC-4D19-9C49-C267B62C1404}
 	EndGlobalSection
 EndGlobal

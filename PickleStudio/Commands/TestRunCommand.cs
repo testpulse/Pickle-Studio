@@ -1,5 +1,5 @@
 ﻿using PickleStudio.Core.Interfaces;
-using PickleStudio.Properties;
+using PickleStudio.Resources;
 
 namespace PickleStudio.Commands
 {
@@ -11,10 +11,10 @@ namespace PickleStudio.Commands
         {
             _state = state;
 
-            Text = Resources.TestRunText;
-            Image = Resources.TestRunImage;
+            Text = Strings.TestRunText;
+            Image = Images.TestRun;
             Enabled = false;
-            ToolTipText = Resources.TestRunToolTipText;
+            ToolTipText = Strings.TestRunToolTipText;
         }
 
         protected override void DoExecute(params string[] args)

@@ -120,18 +120,11 @@
   <data name="CloseButtonText" xml:space="preserve">
     <value>Close</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="EditCopyImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="EditCopyText" xml:space="preserve">
     <value>Copy</value>
   </data>
   <data name="EditCopyToolTipText" xml:space="preserve">
     <value>Copy</value>
-  </data>
-  <data name="EditCutImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EditCutText" xml:space="preserve">
     <value>Cut</value>
@@ -139,17 +132,11 @@
   <data name="EditCutToolTipText" xml:space="preserve">
     <value>Cut</value>
   </data>
-  <data name="EditorDisplayLineNumbersImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\display-line-numbers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="EditorDisplayLineNumbersText" xml:space="preserve">
     <value>Display Line Numbers</value>
   </data>
   <data name="EditorDisplayLineNumbersToolTipText" xml:space="preserve">
     <value>Toggle display of line numbers</value>
-  </data>
-  <data name="EditorDisplaySymbolsImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\display-line-end-symbols.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EditorDisplaySymbolsText" xml:space="preserve">
     <value>Display Symbols</value>
@@ -157,17 +144,11 @@
   <data name="EditorDisplaySymbolsToolTipText" xml:space="preserve">
     <value>Toggle display of non-character symbols</value>
   </data>
-  <data name="EditorWordWrapImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\word-wrap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="EditorWordWrapText" xml:space="preserve">
     <value>Word Wrap</value>
   </data>
   <data name="EditorWordWrapToolTipText" xml:space="preserve">
     <value>Toggle word wrap</value>
-  </data>
-  <data name="EditPasteImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EditPasteText" xml:space="preserve">
     <value>Paste</value>
@@ -175,17 +156,11 @@
   <data name="EditPasteToolTipText" xml:space="preserve">
     <value>Paste</value>
   </data>
-  <data name="EditRedoImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="EditRedoText" xml:space="preserve">
     <value>Redo</value>
   </data>
   <data name="EditRedoToolTipText" xml:space="preserve">
     <value>Redo</value>
-  </data>
-  <data name="EditUndoImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EditUndoText" xml:space="preserve">
     <value>Undo</value>
@@ -196,26 +171,17 @@
   <data name="FileOpenFilter" xml:space="preserve">
     <value>Supported Files (.csproj, .feature)|*.csproj;*.feature</value>
   </data>
-  <data name="FileOpenImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FileOpenText" xml:space="preserve">
     <value>Open</value>
   </data>
   <data name="FileOpenToolTipText" xml:space="preserve">
     <value>Open project or feature file</value>
   </data>
-  <data name="FileSaveAllImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save-all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FileSaveAllText" xml:space="preserve">
     <value>Save All</value>
   </data>
   <data name="FileSaveAllToolTipText" xml:space="preserve">
     <value>Save all files</value>
-  </data>
-  <data name="FileSaveImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FileSaveText" xml:space="preserve">
     <value>Save</value>
@@ -225,9 +191,6 @@
   </data>
   <data name="HelpAboutDialogText" xml:space="preserve">
     <value>This application makes use of the following third party components:</value>
-  </data>
-  <data name="HelpAboutImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HelpAboutText" xml:space="preserve">
     <value>About</value>
@@ -250,31 +213,10 @@
   <data name="SettingsSaveToolTipText" xml:space="preserve">
     <value>Save settings</value>
   </data>
-  <data name="StatusFailureImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\status-failure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="StatusSuccessImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\status-success.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="StatusUnknownImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\status-unknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="StatusUnsavedImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\status-unsaved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TestFailureImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\test-failure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TestRunImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\test-run.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="TestRunText" xml:space="preserve">
     <value>Run</value>
   </data>
   <data name="TestRunToolTipText" xml:space="preserve">
     <value>Run tests</value>
-  </data>
-  <data name="TestSuccessImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\test-success.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

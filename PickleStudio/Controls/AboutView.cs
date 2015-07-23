@@ -1,7 +1,7 @@
 ﻿using BrightIdeasSoftware;
 using PickleStudio.Core.Helpers;
 using PickleStudio.Interfaces;
-using PickleStudio.Properties;
+using PickleStudio.Resources;
 using System;
 using System.Windows.Forms;
 
@@ -13,8 +13,8 @@ namespace PickleStudio.Controls
         {
             InitializeComponent();
 
-            lblAbout.Text = Resources.HelpAboutDialogText;
-            btnClose.Text = Resources.CloseButtonText;
+            lblAbout.Text = Strings.HelpAboutDialogText;
+            btnClose.Text = Strings.CloseButtonText;
 
             olvThirdPartyComponents.HyperlinkClicked += OnHyperlinkClick;
             olvThirdPartyComponents.CellToolTipGetter = UrlGetter;

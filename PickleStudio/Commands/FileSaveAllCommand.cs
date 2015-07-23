@@ -1,5 +1,5 @@
 ﻿using PickleStudio.Core.Interfaces;
-using PickleStudio.Properties;
+using PickleStudio.Resources;
 using System.Linq;
 
 namespace PickleStudio.Commands
@@ -12,10 +12,10 @@ namespace PickleStudio.Commands
         {
             _state = state;
 
-            Text = Resources.FileSaveAllText;
-            Image = Resources.FileSaveAllImage;
+            Text = Strings.FileSaveAllText;
+            Image = Images.FileSaveAll;
             Enabled = false;
-            ToolTipText = Resources.FileSaveAllToolTipText;
+            ToolTipText = Strings.FileSaveAllToolTipText;
         }
 
         protected override void DoExecute(params string[] args)

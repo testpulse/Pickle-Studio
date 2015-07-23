@@ -70,6 +70,7 @@
     <Compile Include="Commands\AbstractCommand.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\CommandExtensions.cs" />
+    <Compile Include="Commands\CommandGroup.cs" />
     <Compile Include="EditorSettings.cs" />
     <Compile Include="Extensions\ByteArrayExtensions.cs" />
     <Compile Include="Extensions\EventHandlerExtensions.cs" />

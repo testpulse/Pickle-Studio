@@ -1,11 +1,16 @@
 ﻿using PickleStudio.Core;
+using PickleStudio.Resources;
 using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Windows.Automation;
 using TestStack.White;
 using TestStack.White.Factory;
+using TestStack.White.UIItems;
+using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
+using TestStack.White.UIItems.WindowStripControls;
 
 namespace PickleStudio.UiTests.Helpers
 {
@@ -28,6 +33,43 @@ namespace PickleStudio.UiTests.Helpers
             var windowTitle = (AssemblyProductAttribute)_assembly.GetCustomAttributes(typeof(AssemblyProductAttribute), true).First();
             Application = Application.Launch(_assembly.Location);
             Window = Application.GetWindow(windowTitle.Product, InitializeOption.NoCache);
+        }
+
+        public bool ClickToolBarButton(string name)
+        {
+            var panel = Window.Get<Panel>("tscMain");
+            var toolStrips = panel.GetMultiple(SearchCriteria.ByControlType(typeof(ToolStrip), WindowsFramework.WinForms));
+            foreach (var toolStrip in toolStrips)
+            {
+                // tool strip items aren't real controls so we have to do this rubbish...
+                var toolStripItems = toolStrip.AutomationElement.FindAll(TreeScope.Descendants, Condition.TrueCondition);
+                foreach (AutomationElement toolStripItem in toolStripItems)
+                {
+                    if (toolStripItem.Current.ControlType == ControlType.Button && toolStripItem.Current.Name == name)
+                    {
+                        var invokePattern = toolStripItem.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
+                        invokePattern.Invoke();
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public bool OpenFile(string fileName)
+        {
+            var isClicked = ClickToolBarButton(Strings.FileOpenText);
+            if (!isClicked) return false;
+
+            Window openDialog = Application.GetWindows().Where(n => n.Name == "Open").First();
+
+            TextBox textField = openDialog.Get<TextBox>(SearchCriteria.ByControlType(ControlType.Edit).AndByText("File name:"));
+            textField.Text = fileName;
+
+            Button openButton = openDialog.Get<Button>(SearchCriteria.ByControlType(ControlType.Button).AndByText("Open"));
+            openButton.Click();
+            return openDialog.IsClosed;
         }
 
         public void Dispose()

@@ -1,5 +1,5 @@
 ﻿using PickleStudio.Core.Interfaces;
-using PickleStudio.Properties;
+using PickleStudio.Resources;
 
 namespace PickleStudio.Commands
 {
@@ -11,10 +11,10 @@ namespace PickleStudio.Commands
         {
             _state = state;
 
-            Text = Resources.FileSaveText;
-            Image = Resources.FileSaveImage;
+            Text = Strings.FileSaveText;
+            Image = Images.FileSave;
             Enabled = false;
-            ToolTipText = Resources.FileSaveToolTipText;
+            ToolTipText = Strings.FileSaveToolTipText;
         }
 
         protected override void DoExecute(params string[] args)
