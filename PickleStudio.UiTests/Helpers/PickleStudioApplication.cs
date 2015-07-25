@@ -24,11 +24,11 @@ namespace PickleStudio.UiTests.Helpers
         public Application Application { get; private set; }
         public Window Window { get; private set; }
 
-        private readonly bool _keepSettingsOnDispose;
+        private readonly bool _killOnDispose;
 
-        public PickleStudioApplication(bool keepSettingsOnDispose = false)
+        public PickleStudioApplication(bool killOnDispose = false)
         {
-            _keepSettingsOnDispose = keepSettingsOnDispose;
+            _killOnDispose = killOnDispose;
 
             var windowTitle = (AssemblyProductAttribute)_assembly.GetCustomAttributes(typeof(AssemblyProductAttribute), true).First();
             Application = Application.Launch(_assembly.Location);
@@ -75,9 +75,10 @@ namespace PickleStudio.UiTests.Helpers
         public void Dispose()
         {
             if (Application == null) return;
-            Application.Close();
-            if (_keepSettingsOnDispose) return;
-            File.Delete(Settings.FileName);
+            if (_killOnDispose) 
+                Application.Kill(); 
+            else 
+                Application.Close();
         }
     }
 }

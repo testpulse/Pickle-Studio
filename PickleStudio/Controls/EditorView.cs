@@ -28,6 +28,7 @@ namespace PickleStudio.Controls
             _state = state;
 
             _editor = new TextEditor();
+            _editor.Name = "txtEditor";
             _editor.IsReadOnly = true;
             _editor.Options.EnableEmailHyperlinks = false;
             _editor.Options.EnableHyperlinks = false;

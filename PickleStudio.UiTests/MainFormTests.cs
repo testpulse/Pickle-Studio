@@ -21,7 +21,7 @@ namespace PickleStudio.UiTests
         [Test]
         public void ApplicationExit_CreateSettingsFile()
         {
-            using (var pickleStudio = new PickleStudioApplication(true))
+            using (var pickleStudio = new PickleStudioApplication())
             {
                 Assert.That(pickleStudio.Window, Is.Not.Null);
             }

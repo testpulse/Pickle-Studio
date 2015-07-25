@@ -1,7 +1,8 @@
 ﻿using NUnit.Framework;
-using PickleStudio.Resources;
 using PickleStudio.UiTests.Helpers;
 using System.IO;
+using TestStack.White.UIItems;
+using TestStack.White.UIItems.Finders;
 
 namespace PickleStudio.UiTests
 {
@@ -11,7 +12,7 @@ namespace PickleStudio.UiTests
         [Test]
         public void LoadInvalidFile_OpenDialogDisplaysError()
         {
-            using (var pickleStudio = new PickleStudioApplication())
+            using (var pickleStudio = new PickleStudioApplication(true))
             {
                 Assert.That(pickleStudio.Window, Is.Not.Null);
 
@@ -21,7 +22,7 @@ namespace PickleStudio.UiTests
         }
    
         [Test]
-        public void LoadFile_AppearsInProjectAndEditorViews()
+        public void LoadFile_AppearsInProjectView()
         {
             using (var pickleStudio = new PickleStudioApplication())
             {
@@ -31,7 +32,14 @@ namespace PickleStudio.UiTests
                 var isSuccessful = pickleStudio.OpenFile(path);
                 Assert.That(isSuccessful, Is.True);
 
-                // TODO assert that feature is actually displayed in project and editor views!
+                var project = pickleStudio.Window.Get<ListView>(SearchCriteria.ByAutomationId("olvProject"));
+                Assert.That(project, Is.Not.Null);
+                Assert.That(project.Items.Count, Is.EqualTo(1));
+
+                // should be able to check if it is visible in editor too but although I can find the editor 
+                // component, TestStack.White/UIAutomation doesn't seem to recognise it as a text component 
+                // and while it seems like it should be possible to extend something to make it work, I can't 
+                // work it out and I can't find any examples that show how it's done.
             }
         }
     }
