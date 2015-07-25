@@ -1,11 +1,10 @@
-﻿using PickleStudio.Core;
-using System;
+﻿using PickleStudio.Core.Options;
 
 namespace PickleStudio.Core.Interfaces
 {
     public interface IApplicationState
     {
-        Settings Settings { get; }
+        ApplicationOptions Settings { get; }
         Project Project { get; }
         IEditor Editor { get; }
         ITestViewer TestViewer { get; }

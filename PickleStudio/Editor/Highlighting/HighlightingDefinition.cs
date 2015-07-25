@@ -1,4 +1,5 @@
 ﻿using ICSharpCode.AvalonEdit.Highlighting;
+using PickleStudio.Core.Options;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
@@ -24,10 +25,20 @@ namespace PickleStudio.Editor.Highlighting
 
         public HighlightingDefinition AddRule(string expression, Color color, FontWeight? fontWeight = null)
         {
+            return AddRule(expression, color.ToHighlightingColor(fontWeight));
+        }
+
+        public HighlightingDefinition AddRule(string expression, FontOptions options)
+        {
+            return AddRule(expression, options.ToHighlightingColor());
+        }
+
+        public HighlightingDefinition AddRule(string expression, HighlightingColor color)
+        {
             var rule = new HighlightingRule
             {
                 Regex = expression.ToRegex(),
-                Color = color.ToHighlightingColor(fontWeight)
+                Color = color
             };
             return AddRule(rule);
         }
@@ -41,11 +52,21 @@ namespace PickleStudio.Editor.Highlighting
 
         public HighlightingDefinition AddSpan(string startExpression, string endExpression, Color color, FontWeight? fontWeight = null)
         {
+            return AddSpan(startExpression, endExpression, color.ToHighlightingColor(fontWeight));
+        }
+
+        public HighlightingDefinition AddSpan(string startExpression, string endExpression, FontOptions options)
+        {
+            return AddSpan(startExpression, endExpression, options.ToHighlightingColor());
+        }
+
+        public HighlightingDefinition AddSpan(string startExpression, string endExpression, HighlightingColor color)
+        {
             var span = new HighlightingSpan
             {
                 StartExpression = startExpression.ToRegex(),
                 EndExpression = endExpression.ToRegex(),
-                SpanColor = color.ToHighlightingColor(fontWeight),
+                SpanColor = color,
                 SpanColorIncludesStart = true,
                 SpanColorIncludesEnd = true
             };

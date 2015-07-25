@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
 
-namespace PickleStudio.Core
+namespace PickleStudio.Core.Options
 {
-    public class WindowSettings
+    public class WindowOptions
     {
         public int Height { get; set; }
         public int Width { get; set; }
@@ -10,7 +10,7 @@ namespace PickleStudio.Core
         public int BottomPanelHeight { get; set; }
         public int LeftPanelWidth { get; set; }
 
-        public WindowSettings()
+        public WindowOptions()
         {
             Height = 768;
             Width = 1024;

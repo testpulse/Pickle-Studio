@@ -55,9 +55,12 @@
       <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -71,7 +74,7 @@
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\CommandExtensions.cs" />
     <Compile Include="Commands\CommandGroup.cs" />
-    <Compile Include="EditorSettings.cs" />
+    <Compile Include="Options\EditorOptions.cs" />
     <Compile Include="Extensions\ByteArrayExtensions.cs" />
     <Compile Include="Extensions\EventHandlerExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -84,10 +87,11 @@
     <Compile Include="Helpers\ThirdPartyComponent.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\ITestViewer.cs" />
+    <Compile Include="Options\FontOptions.cs" />
     <Compile Include="Project.cs" />
-    <Compile Include="ProjectSettings.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="WindowSettings.cs" />
+    <Compile Include="Options\ProjectOptions.cs" />
+    <Compile Include="Options\ApplicationOptions.cs" />
+    <Compile Include="Options\WindowOptions.cs" />
     <Compile Include="Interfaces\IApplicationState.cs" />
     <Compile Include="Interfaces\IEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

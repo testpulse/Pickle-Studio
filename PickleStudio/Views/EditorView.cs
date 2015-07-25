@@ -1,18 +1,18 @@
 ﻿using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.Folding;
 using PickleStudio.Core;
+using PickleStudio.Core.Extensions;
 using PickleStudio.Core.Helpers;
 using PickleStudio.Core.Interfaces;
 using PickleStudio.Editor.CodeCompletion;
 using PickleStudio.Editor.Folding;
 using PickleStudio.Editor.Highlighting;
-using PickleStudio.Extensions;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Windows.Media;
 
-namespace PickleStudio.Controls
+namespace PickleStudio.Views
 {
     public partial class EditorView : UserControl, IEditor
     {
@@ -33,11 +33,6 @@ namespace PickleStudio.Controls
             _editor.Options.EnableEmailHyperlinks = false;
             _editor.Options.EnableHyperlinks = false;
             _editor.TextChanged += OnTextChanged;
-            _editor.SyntaxHighlighting = new GherkinHighlightingDefinition();
-
-            // make customisable
-            _editor.FontFamily = new FontFamily("Consolas");
-            _editor.FontSize = "10pt".ToFontSize();
 
             ehoEditor.Child = _editor;
 
@@ -101,6 +96,12 @@ namespace PickleStudio.Controls
 
         public void ApplySettings()
         {
+            _editor.FontFamily = new FontFamily(_state.Settings.Editor.FontFamily);
+            _editor.FontSize = _state.Settings.Editor.FontSize.ToFontSize();
+            _editor.Background = new SolidColorBrush(_state.Settings.Editor.FontOptions.BackgroundColor);
+            _editor.Foreground = new SolidColorBrush(_state.Settings.Editor.FontOptions.TextColor);
+            _editor.FontWeight = _state.Settings.Editor.FontOptions.Weight;
+            _editor.FontStyle = _state.Settings.Editor.FontOptions.Style;
             _editor.WordWrap = _state.Settings.Editor.WordWrap;
             _editor.ShowLineNumbers = _state.Settings.Editor.DisplayLineNumbers;
             var displaySymbols = _state.Settings.Editor.DisplaySymbols;
@@ -108,6 +109,7 @@ namespace PickleStudio.Controls
             _editor.Options.ShowTabs = displaySymbols;
             _editor.Options.ShowSpaces = displaySymbols;
             _editor.Options.ShowEndOfLine = displaySymbols;
+            _editor.SyntaxHighlighting = new GherkinHighlightingDefinition(_state.Settings.Editor);
         }
     }
 }

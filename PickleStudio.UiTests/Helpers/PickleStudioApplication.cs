@@ -1,4 +1,5 @@
 ﻿using PickleStudio.Core;
+using PickleStudio.Core.Options;
 using PickleStudio.Resources;
 using System;
 using System.IO;
@@ -19,7 +20,7 @@ namespace PickleStudio.UiTests.Helpers
         private static readonly Assembly _assembly = typeof(Program).Assembly;
 
         public static string ExeLocation { get { return _assembly.Location; } }
-        public static string SettingsLocation { get { return Path.Combine(Path.GetDirectoryName(ExeLocation), Settings.FileName); } }
+        public static string SettingsLocation { get { return Path.Combine(Path.GetDirectoryName(ExeLocation), ApplicationOptions.FileName); } }
 
         public Application Application { get; private set; }
         public Window Window { get; private set; }

@@ -4,28 +4,28 @@ using System;
 using System.ComponentModel;
 using System.IO;
 
-namespace PickleStudio.Core
+namespace PickleStudio.Core.Options
 {
     [Serializable]
-    public class Settings
+    public class ApplicationOptions
     {
         public event EventHandler Saving;
         public event EventHandler Loaded;
         public event PropertyChangedEventHandler EditorSettingsChanged;
 
-        public WindowSettings Window { get; private set; }
-        public ProjectSettings Project { get; private set; }
-        public EditorSettings Editor { get; private set; }
+        public WindowOptions Window { get; private set; }
+        public ProjectOptions Project { get; private set; }
+        public EditorOptions Editor { get; private set; }
 
         public const string FileName = "PickleStudio.settings";
 
         private readonly Lazy<Serializer> _serializer = new Lazy<Serializer>(() => new Serializer());
 
-        public Settings()
+        public ApplicationOptions()
         {
-            Window = new WindowSettings();
-            Project = new ProjectSettings();
-            SetEditor(new EditorSettings(), OnEditorPropertyChanged);
+            Window = new WindowOptions();
+            Project = new ProjectOptions();
+            SetEditor(new EditorOptions(), OnEditorPropertyChanged);
         }
 
         private void OnEditorPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -43,8 +43,8 @@ namespace PickleStudio.Core
         public void Load()
         {
             var settings = (File.Exists(FileName)) ?
-                _serializer.Value.DeserializeFromFile<Settings>(FileName) :
-                new Settings();
+                _serializer.Value.DeserializeFromFile<ApplicationOptions>(FileName) :
+                new ApplicationOptions();
 
             Window = settings.Window;
             Project = settings.Project;
@@ -53,7 +53,7 @@ namespace PickleStudio.Core
             Loaded.Raise(this);
         }
 
-        private void SetEditor(EditorSettings editor, Action<object, PropertyChangedEventArgs> onPropertyChanged)
+        private void SetEditor(EditorOptions editor, Action<object, PropertyChangedEventArgs> onPropertyChanged)
         {
             if (Editor != null) Editor.PropertyChanged -= OnEditorPropertyChanged;
             Editor = editor;

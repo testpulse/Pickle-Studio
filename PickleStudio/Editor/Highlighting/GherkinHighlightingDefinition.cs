@@ -1,23 +1,21 @@
-﻿using System.Windows;
-using System.Windows.Media;
+﻿using PickleStudio.Core.Options;
 
 namespace PickleStudio.Editor.Highlighting
 {
     public class GherkinHighlightingDefinition : HighlightingDefinition
     {
-
-
-        public GherkinHighlightingDefinition()
+        public GherkinHighlightingDefinition(EditorOptions options)
             : base("Gherkin")
         {
-            AddSpan(Gherkin.CommentExpression, @"$", Colors.Green);
-            AddSpan(Gherkin.TagExpression, @"$", Colors.Teal);
-            AddSpan(@"<", @">", Colors.Gray);
-            AddSpan(@"""", @"""", Colors.Gray);
-            AddSpan(@"'", @"'", Colors.Gray);
-            AddRule(Gherkin.FunctionExpression, Colors.DarkBlue, FontWeights.Bold);
-            AddRule(Gherkin.ReservedExpression, Colors.Blue, FontWeights.Bold);
-            AddRule(@"(?<=\|)([^\|]*?)(?=\|)", Colors.Maroon);
+            AddSpan(Gherkin.CommentExpression, @"$", options.CommentFontOptions);
+            AddSpan(Gherkin.TagExpression, @"$", options.TagFontOptions);
+            AddSpan(@"<", @">", options.ParametersFontOptions);
+            var stringsColor = options.StringsFontOptions.ToHighlightingColor();
+            AddSpan(@"""", @"""", stringsColor);
+            AddSpan(@"'", @"'", stringsColor);
+            AddRule(Gherkin.FunctionExpression, options.FeatureKeywordFontOptions);
+            AddRule(Gherkin.ReservedExpression, options.StepKeywordFontOptions);
+            AddRule(@"(?<=\|)([^\|]*?)(?=\|)", options.TableFontOptions);
         }
     }
 }

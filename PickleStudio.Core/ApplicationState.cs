@@ -1,18 +1,19 @@
 ﻿using PickleStudio.Core.Interfaces;
+using PickleStudio.Core.Options;
 using System;
 
 namespace PickleStudio.Core
 {
     public class ApplicationState : IApplicationState
     {
-        public Settings Settings { get; private set; }
+        public ApplicationOptions Settings { get; private set; }
         public Project Project { get; private set; }
         public IEditor Editor { get; private set; }
         public ITestViewer TestViewer { get; private set; }
 
         public ApplicationState()
         {
-            Settings = new Settings();
+            Settings = new ApplicationOptions();
             Project = new Project();
         }
 

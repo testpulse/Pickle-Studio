@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 
-namespace PickleStudio.Core
+namespace PickleStudio.Core.Options
 {
-    public class ProjectSettings
+    public class ProjectOptions
     {
         public string InitialDirectory { get; set; }
         public IEnumerable<string> OpenedFilePaths { get; set; }
 
-        public ProjectSettings()
+        public ProjectOptions()
         {
             InitialDirectory = string.Empty;
             OpenedFilePaths = new List<string>();

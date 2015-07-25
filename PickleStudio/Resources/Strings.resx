@@ -172,7 +172,7 @@
     <value>Supported Files (.csproj, .feature)|*.csproj;*.feature</value>
   </data>
   <data name="FileOpenText" xml:space="preserve">
-    <value>Open</value>
+    <value>Open...</value>
   </data>
   <data name="FileOpenToolTipText" xml:space="preserve">
     <value>Open project or feature file</value>
@@ -193,7 +193,7 @@
     <value>This application makes use of the following third party components:</value>
   </data>
   <data name="HelpAboutText" xml:space="preserve">
-    <value>About</value>
+    <value>About...</value>
   </data>
   <data name="HelpAboutToolTipText" xml:space="preserve">
     <value>About</value>
@@ -224,5 +224,20 @@
   </data>
   <data name="FileCloseToolTipText" xml:space="preserve">
     <value>Close current project or feature</value>
+  </data>
+  <data name="ToolsOptionsText" xml:space="preserve">
+    <value>Options...</value>
+  </data>
+  <data name="ToolsOptionsToolTipText" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="OkButtonText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OptionsViewTitle" xml:space="preserve">
+    <value>Options</value>
   </data>
 </root>

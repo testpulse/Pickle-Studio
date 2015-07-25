@@ -7,7 +7,8 @@ namespace PickleStudio.Core.Commands
         File,
         Edit,
         Editor,
+        Test,
+        Tools,
         Help,
-        Test
     }
 }

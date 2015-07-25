@@ -1,11 +1,12 @@
 ﻿using BrightIdeasSoftware;
 using PickleStudio.Core.Helpers;
+using PickleStudio.Extensions;
 using PickleStudio.Interfaces;
 using PickleStudio.Resources;
 using System;
 using System.Windows.Forms;
 
-namespace PickleStudio.Controls
+namespace PickleStudio.Views
 {
     public partial class AboutView : UserControl, IDialogControl
     {
@@ -15,6 +16,8 @@ namespace PickleStudio.Controls
 
             lblAbout.Text = Strings.HelpAboutDialogText;
             btnClose.Text = Strings.CloseButtonText;
+
+            //ParentForm.AcceptButton = btnClose;
 
             olvThirdPartyComponents.HyperlinkClicked += OnHyperlinkClick;
             olvThirdPartyComponents.CellToolTipGetter = UrlGetter;
@@ -44,7 +47,7 @@ namespace PickleStudio.Controls
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            if (ParentForm != null) ParentForm.Close();
+            this.Close();
         }
     }
 }

@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace PickleStudio.Controls
+namespace PickleStudio.Views
 {
     public partial class ProjectView : UserControl
     {

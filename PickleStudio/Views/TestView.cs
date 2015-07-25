@@ -6,7 +6,7 @@ using PickleStudio.Extensions;
 using System;
 using System.Windows.Forms;
 
-namespace PickleStudio.Controls
+namespace PickleStudio.Views
 {
     public partial class TestView : UserControl, ITestViewer
     {

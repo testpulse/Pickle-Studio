@@ -1,6 +1,7 @@
 ﻿using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.AvalonEdit.Highlighting.Xshd;
 using PickleStudio.Core.Extensions;
+using PickleStudio.Core.Options;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Media;
@@ -23,6 +24,18 @@ namespace PickleStudio.Editor.Highlighting
             {
                 Foreground = new SimpleHighlightingBrush(color),
                 FontWeight = fontWeight
+            };
+        }
+
+        public static HighlightingColor ToHighlightingColor(this FontOptions options)
+        {
+            return new HighlightingColor
+            {
+                Foreground = new SimpleHighlightingBrush(options.TextColor),
+                Background = new SimpleHighlightingBrush(options.BackgroundColor),
+                FontWeight = options.Weight,
+                FontStyle = options.Style,
+                Underline = options.Underline,
             };
         }
 

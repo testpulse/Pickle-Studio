@@ -18,8 +18,9 @@ namespace PickleStudio.Core.Commands
         EditPaste,
         EditUndo,
         EditRedo,
+        TestBuild,
+        TestRun,
+        ToolsOptions,
         HelpAbout,
-        //TestBuild,
-        TestRun
     }
 }

@@ -1,10 +1,11 @@
 ﻿using PickleStudio.Commands;
-using PickleStudio.Controls;
 using PickleStudio.Core;
 using PickleStudio.Core.Commands;
 using PickleStudio.Core.Interfaces;
+using PickleStudio.Core.Options;
 using PickleStudio.Extensions;
 using PickleStudio.Resources;
+using PickleStudio.Views;
 using System;
 using System.Windows.Forms;
 
@@ -56,16 +57,17 @@ namespace PickleStudio
             Command.EditorDisplayLineNumbers.Register(new ToggleCommand(() => State.Settings.Editor.DisplayLineNumbers, (a) => State.Settings.Editor.DisplayLineNumbers = a, Strings.EditorDisplayLineNumbersText, Images.EditorDisplayLineNumbers, Strings.EditorDisplayLineNumbersToolTipText));
             Command.EditorDisplaySymbols.Register(new ToggleCommand(() => State.Settings.Editor.DisplaySymbols, (a) => State.Settings.Editor.DisplaySymbols = a, Strings.EditorDisplaySymbolsText, Images.EditorDisplaySymbols, Strings.EditorDisplaySymbolsToolTipText));
             Command.HelpAbout.Register(new DelegateCommand(() => new AboutView().ShowDialog(), Strings.HelpAboutText, Images.HelpAbout, Strings.HelpAboutToolTipText));
+            Command.ToolsOptions.Register(new DelegateCommand(() => new OptionsView().ShowDialog(), Strings.ToolsOptionsText, Images.ToolsOptions, Strings.ToolsOptionsToolTipText));
             Command.TestRun.Register(new TestRunCommand(State));
         }
 
         private void CreateViews()
         {
-            _projectView = new ProjectView(State);
+            _projectView = new ProjectView(State) { Name = "uclProject" };
             splitContainer2.Panel1.Controls.Add(_projectView);
             _projectView.Dock = DockStyle.Fill;
 
-            _editorView = new EditorView(State);
+            _editorView = new EditorView(State) { Name = "uclEditor" };
             splitContainer2.Panel2.Controls.Add(_editorView);
             _editorView.Dock = DockStyle.Fill;
             State.RegisterEditor(_editorView);
@@ -85,6 +87,7 @@ namespace PickleStudio
             // build in opposite to desired order becauses it's a pain to re-arrange these things.  Need to revisit.
             tscMain
                 .AddToolStrip(CommandGroup.Help, Command.HelpAbout)
+                .AddToolStrip(CommandGroup.Tools, Command.ToolsOptions)
                 .AddToolStrip(CommandGroup.Editor, Command.EditorWordWrap, Command.EditorDisplayLineNumbers, Command.EditorDisplaySymbols)
                 .AddToolStrip(CommandGroup.Edit, Command.EditCopy, Command.EditCut, Command.EditPaste, Command.None, Command.EditUndo, Command.EditRedo)
                 .AddToolStrip(CommandGroup.File, Command.FileOpen, Command.FileSave, Command.FileSaveAll, Command.FileClose);

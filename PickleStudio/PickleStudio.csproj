@@ -82,11 +82,23 @@
     <Compile Include="Commands\FileSaveCommand.cs" />
     <Compile Include="Commands\TestRunCommand.cs" />
     <Compile Include="Commands\ToggleCommand.cs" />
-    <Compile Include="Controls\AboutView.cs">
+    <Compile Include="Controls\FontStyleControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\AboutView.Designer.cs">
+    <Compile Include="Controls\FontStyleControl.Designer.cs">
+      <DependentUpon>FontStyleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AboutView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AboutView.Designer.cs">
       <DependentUpon>AboutView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OptionsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OptionsView.Designer.cs">
+      <DependentUpon>OptionsView.cs</DependentUpon>
     </Compile>
     <Compile Include="Editor\CodeCompletion\CodeCompletionData.cs" />
     <Compile Include="Editor\CodeCompletion\CodeCompletionProjectSteps.cs" />
@@ -101,32 +113,31 @@
     <Compile Include="Editor\Highlighting\HighlightingExtensions.cs" />
     <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Editor\Gherkin.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\ControlExtensions.cs" />
     <Compile Include="Interfaces\IUiCommand.cs" />
     <Compile Include="Commands\FileOpenCommand.cs" />
-    <Compile Include="Controls\EditorView.cs">
+    <Compile Include="Views\EditorView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\EditorView.Designer.cs">
+    <Compile Include="Views\EditorView.Designer.cs">
       <DependentUpon>EditorView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\OutputView.cs">
+    <Compile Include="Views\OutputView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\OutputView.Designer.cs">
+    <Compile Include="Views\OutputView.Designer.cs">
       <DependentUpon>OutputView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ProjectView.cs">
+    <Compile Include="Views\ProjectView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ProjectView.Designer.cs">
+    <Compile Include="Views\ProjectView.Designer.cs">
       <DependentUpon>ProjectView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TestView.cs">
+    <Compile Include="Views\TestView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\TestView.Designer.cs">
+    <Compile Include="Views\TestView.Designer.cs">
       <DependentUpon>TestView.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IDialogControl.cs" />
@@ -148,16 +159,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Controls\AboutView.resx">
+    <EmbeddedResource Include="Controls\FontStyleControl.resx">
+      <DependentUpon>FontStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AboutView.resx">
       <DependentUpon>AboutView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\EditorView.resx">
+    <EmbeddedResource Include="Views\EditorView.resx">
       <DependentUpon>EditorView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ProjectView.resx">
+    <EmbeddedResource Include="Views\OptionsView.resx">
+      <DependentUpon>OptionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProjectView.resx">
       <DependentUpon>ProjectView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\TestView.resx">
+    <EmbeddedResource Include="Views\TestView.resx">
       <DependentUpon>TestView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -180,6 +197,7 @@
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
     <Content Include="PickleStudio.ico" />
+    <Content Include="Resources\Images\ToolsOptions.png" />
     <Content Include="Resources\Images\HelpAbout.png" />
     <Content Include="Resources\Images\FileClose.png" />
     <Content Include="Resources\Images\TestRun.png" />

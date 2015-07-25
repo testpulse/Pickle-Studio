@@ -67,7 +67,7 @@ namespace PickleStudio.Extensions
             return ts;
         }
 
-        public static void ShowDialog<T>(this T control)
+        public static DialogResult ShowDialog<T>(this T control)
             where T : UserControl, IDialogControl
         {
             var form = new Form();
@@ -79,7 +79,14 @@ namespace PickleStudio.Extensions
             form.FormBorderStyle = FormBorderStyle.FixedDialog;
             form.StartPosition = FormStartPosition.CenterScreen;
             form.Text = control.Title;
-            form.ShowDialog();
+            return form.ShowDialog();
+        }
+
+        public static void Close(this UserControl control, DialogResult dialogResult = DialogResult.OK)
+        {
+            if (control.ParentForm == null) return;
+            control.ParentForm.DialogResult = dialogResult;
+            control.ParentForm.Close();
         }
     }
 }

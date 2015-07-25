@@ -61,6 +61,15 @@ namespace PickleStudio.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string CancelButtonText {
+            get {
+                return ResourceManager.GetString("CancelButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         public static string CloseButtonText {
@@ -241,7 +250,7 @@ namespace PickleStudio.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open.
+        ///   Looks up a localized string similar to Open....
         /// </summary>
         public static string FileOpenText {
             get {
@@ -304,7 +313,7 @@ namespace PickleStudio.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About.
+        ///   Looks up a localized string similar to About....
         /// </summary>
         public static string HelpAboutText {
             get {
@@ -327,6 +336,24 @@ namespace PickleStudio.Resources {
         public static string NoProjectName {
             get {
                 return ResourceManager.GetString("NoProjectName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string OkButtonText {
+            get {
+                return ResourceManager.GetString("OkButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Options.
+        /// </summary>
+        public static string OptionsViewTitle {
+            get {
+                return ResourceManager.GetString("OptionsViewTitle", resourceCulture);
             }
         }
         
@@ -381,6 +408,24 @@ namespace PickleStudio.Resources {
         public static string TestRunToolTipText {
             get {
                 return ResourceManager.GetString("TestRunToolTipText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Options....
+        /// </summary>
+        public static string ToolsOptionsText {
+            get {
+                return ResourceManager.GetString("ToolsOptionsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Options.
+        /// </summary>
+        public static string ToolsOptionsToolTipText {
+            get {
+                return ResourceManager.GetString("ToolsOptionsToolTipText", resourceCulture);
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace PickleStudio.Controls
+﻿namespace PickleStudio.Views
 {
     partial class OutputView
     {

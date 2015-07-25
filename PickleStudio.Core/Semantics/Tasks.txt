@@ -1,0 +1,9 @@
+﻿Parse file
+Walk AST and output in some form
+Work out how to make it editable
+Convert back to plain text.
+
+http://peaker.github.io/lamdu/
+https://github.com/cucumber/gherkin3/blob/master/gherkin.berp
+https://github.com/cucumber/gherkin3/tree/master/dotnet
+https://github.com/cucumber/gherkin3/tree/master/docs
