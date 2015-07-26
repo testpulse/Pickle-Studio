@@ -178,7 +178,7 @@
   <data name="FileClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Images\FileClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ToolsOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>images\toolsoptions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EditorOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>images\editoroptions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

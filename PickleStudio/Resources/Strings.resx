@@ -175,7 +175,7 @@
     <value>Open...</value>
   </data>
   <data name="FileOpenToolTipText" xml:space="preserve">
-    <value>Open project or feature file</value>
+    <value>Open project or feature file...</value>
   </data>
   <data name="FileSaveAllText" xml:space="preserve">
     <value>Save All</value>
@@ -196,7 +196,7 @@
     <value>About...</value>
   </data>
   <data name="HelpAboutToolTipText" xml:space="preserve">
-    <value>About</value>
+    <value>About...</value>
   </data>
   <data name="NoProjectName" xml:space="preserve">
     <value>No Project</value>
@@ -225,11 +225,11 @@
   <data name="FileCloseToolTipText" xml:space="preserve">
     <value>Close current project or feature</value>
   </data>
-  <data name="ToolsOptionsText" xml:space="preserve">
-    <value>Options...</value>
+  <data name="EditorOptionsText" xml:space="preserve">
+    <value>Editor Options...</value>
   </data>
-  <data name="ToolsOptionsToolTipText" xml:space="preserve">
-    <value>Options</value>
+  <data name="EditorOptionsToolTipText" xml:space="preserve">
+    <value>Editor options...</value>
   </data>
   <data name="CancelButtonText" xml:space="preserve">
     <value>Cancel</value>
@@ -237,7 +237,7 @@
   <data name="OkButtonText" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="OptionsViewTitle" xml:space="preserve">
-    <value>Options</value>
+  <data name="EditorOptionsViewTitle" xml:space="preserve">
+    <value>Editor Options</value>
   </data>
 </root>

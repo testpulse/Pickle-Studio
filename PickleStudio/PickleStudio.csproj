@@ -78,27 +78,29 @@
   <ItemGroup>
     <Compile Include="Commands\AbstractUiCommand.cs" />
     <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="Commands\EditorOptionsCommand.cs" />
     <Compile Include="Commands\FileSaveAllCommand.cs" />
     <Compile Include="Commands\FileSaveCommand.cs" />
     <Compile Include="Commands\TestRunCommand.cs" />
     <Compile Include="Commands\ToggleCommand.cs" />
-    <Compile Include="Controls\FontStyleControl.cs">
+    <Compile Include="Views\Controls\FontOptionsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FontStyleControl.Designer.cs">
-      <DependentUpon>FontStyleControl.cs</DependentUpon>
+    <Compile Include="Views\Controls\FontOptionsControl.Designer.cs">
+      <DependentUpon>FontOptionsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\ColorExtensions.cs" />
     <Compile Include="Views\AboutView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\AboutView.Designer.cs">
       <DependentUpon>AboutView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\OptionsView.cs">
+    <Compile Include="Views\EditorOptionsView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\OptionsView.Designer.cs">
-      <DependentUpon>OptionsView.cs</DependentUpon>
+    <Compile Include="Views\EditorOptionsView.Designer.cs">
+      <DependentUpon>EditorOptionsView.cs</DependentUpon>
     </Compile>
     <Compile Include="Editor\CodeCompletion\CodeCompletionData.cs" />
     <Compile Include="Editor\CodeCompletion\CodeCompletionProjectSteps.cs" />
@@ -159,8 +161,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Controls\FontStyleControl.resx">
-      <DependentUpon>FontStyleControl.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Controls\FontOptionsControl.resx">
+      <DependentUpon>FontOptionsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AboutView.resx">
       <DependentUpon>AboutView.cs</DependentUpon>
@@ -168,8 +170,8 @@
     <EmbeddedResource Include="Views\EditorView.resx">
       <DependentUpon>EditorView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\OptionsView.resx">
-      <DependentUpon>OptionsView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\EditorOptionsView.resx">
+      <DependentUpon>EditorOptionsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ProjectView.resx">
       <DependentUpon>ProjectView.cs</DependentUpon>
@@ -197,7 +199,7 @@
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
     <Content Include="PickleStudio.ico" />
-    <Content Include="Resources\Images\ToolsOptions.png" />
+    <Content Include="Resources\Images\EditorOptions.png" />
     <Content Include="Resources\Images\HelpAbout.png" />
     <Content Include="Resources\Images\FileClose.png" />
     <Content Include="Resources\Images\TestRun.png" />

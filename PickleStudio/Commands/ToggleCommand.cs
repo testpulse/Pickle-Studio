@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using PickleStudio.Core.Extensions;
 
 namespace PickleStudio.Commands
 {

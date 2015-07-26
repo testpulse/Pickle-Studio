@@ -151,6 +151,33 @@ namespace PickleStudio.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Editor Options....
+        /// </summary>
+        public static string EditorOptionsText {
+            get {
+                return ResourceManager.GetString("EditorOptionsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editor options....
+        /// </summary>
+        public static string EditorOptionsToolTipText {
+            get {
+                return ResourceManager.GetString("EditorOptionsToolTipText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editor Options.
+        /// </summary>
+        public static string EditorOptionsViewTitle {
+            get {
+                return ResourceManager.GetString("EditorOptionsViewTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Word Wrap.
         /// </summary>
         public static string EditorWordWrapText {
@@ -259,7 +286,7 @@ namespace PickleStudio.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open project or feature file.
+        ///   Looks up a localized string similar to Open project or feature file....
         /// </summary>
         public static string FileOpenToolTipText {
             get {
@@ -322,7 +349,7 @@ namespace PickleStudio.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About.
+        ///   Looks up a localized string similar to About....
         /// </summary>
         public static string HelpAboutToolTipText {
             get {
@@ -345,15 +372,6 @@ namespace PickleStudio.Resources {
         public static string OkButtonText {
             get {
                 return ResourceManager.GetString("OkButtonText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Options.
-        /// </summary>
-        public static string OptionsViewTitle {
-            get {
-                return ResourceManager.GetString("OptionsViewTitle", resourceCulture);
             }
         }
         
@@ -408,24 +426,6 @@ namespace PickleStudio.Resources {
         public static string TestRunToolTipText {
             get {
                 return ResourceManager.GetString("TestRunToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Options....
-        /// </summary>
-        public static string ToolsOptionsText {
-            get {
-                return ResourceManager.GetString("ToolsOptionsText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Options.
-        /// </summary>
-        public static string ToolsOptionsToolTipText {
-            get {
-                return ResourceManager.GetString("ToolsOptionsToolTipText", resourceCulture);
             }
         }
     }

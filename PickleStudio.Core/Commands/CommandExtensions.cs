@@ -24,6 +24,11 @@ namespace PickleStudio.Core.Commands
             if (_commands.ContainsKey(type)) _commands[type].Execute(args);
         }
 
+        public static void Sync(this Command type)
+        {
+            if (_commands.ContainsKey(type)) _commands[type].Sync();
+        }
+
         public static void SetEnabled(this Command type, bool enabled)
         {
             if (_commands.ContainsKey(type)) _commands[type].Enabled = enabled;

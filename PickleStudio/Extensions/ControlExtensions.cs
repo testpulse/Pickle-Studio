@@ -8,7 +8,7 @@ namespace PickleStudio.Extensions
 {
     public static class ControlExtensions
     {
-        public static bool BindControl(this Command type, ToolStripItem control)
+        public static bool BindControl(this Command type, ToolStripButton control)
         {
             var command = type.Get<IUiCommand>();
             if (command == null) return false;
@@ -23,7 +23,12 @@ namespace PickleStudio.Extensions
                     control.Image = command.Image;
                     control.DisplayStyle = (control.Image != null) ? ToolStripItemDisplayStyle.Image : ToolStripItemDisplayStyle.Text;
                 }
+                if (e.PropertyName == "ValueChanged") control.Checked = command.IsToggled;
             };
+            
+            control.Name = "tbb" + type.ToString();
+            control.CheckOnClick = command.CanToggle;
+            control.Checked = command.IsToggled;
             control.Text = command.Text;
             control.ToolTipText = command.ToolTipText;
             control.Enabled = command.Enabled;
@@ -53,13 +58,9 @@ namespace PickleStudio.Extensions
                     item = new ToolStripSeparator();
                     break;
                 default:
-                    item = new ToolStripButton
-                    {
-                        Name = "tbb" + type.ToString(),
-                        CheckOnClick = (command != null && command.CanToggle),
-                        Checked = (command != null && command.IsToggled)
-                    };
-                    type.BindControl(item);
+                    var button = new ToolStripButton();
+                    type.BindControl(button);
+                    item = button;
                     break;
             }
             ts.Items.Add(item);
@@ -79,6 +80,8 @@ namespace PickleStudio.Extensions
             form.FormBorderStyle = FormBorderStyle.FixedDialog;
             form.StartPosition = FormStartPosition.CenterScreen;
             form.Text = control.Title;
+            form.AcceptButton = control.AcceptButton;
+            form.CancelButton = control.CancelButton;
             return form.ShowDialog();
         }
 

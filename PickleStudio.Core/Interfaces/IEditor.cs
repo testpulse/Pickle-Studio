@@ -8,6 +8,6 @@ namespace PickleStudio.Core.Interfaces
         void Paste();
         void Undo();
         void Redo();
-        void ApplySettings();
+        void ApplySettings(string propertyName);
     }
 }

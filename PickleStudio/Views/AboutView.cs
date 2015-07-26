@@ -17,8 +17,6 @@ namespace PickleStudio.Views
             lblAbout.Text = Strings.HelpAboutDialogText;
             btnClose.Text = Strings.CloseButtonText;
 
-            //ParentForm.AcceptButton = btnClose;
-
             olvThirdPartyComponents.HyperlinkClicked += OnHyperlinkClick;
             olvThirdPartyComponents.CellToolTipGetter = UrlGetter;
 
@@ -43,6 +41,16 @@ namespace PickleStudio.Views
                 var version = Version.Parse(Application.ProductVersion);
                 return string.Format("About {0} v{1}.{2}.{3}", Application.ProductName, version.Major, version.Minor, version.Build); 
             }
+        }
+
+        public IButtonControl AcceptButton
+        {
+            get { return btnClose; }
+        }
+
+        public IButtonControl CancelButton
+        {
+            get { return btnClose; }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

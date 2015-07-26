@@ -13,6 +13,7 @@ namespace PickleStudio.Core.Commands
         EditorWordWrap,
         EditorDisplayLineNumbers,
         EditorDisplaySymbols,
+        EditorOptions,
         EditCopy,
         EditCut,
         EditPaste,
@@ -20,7 +21,6 @@ namespace PickleStudio.Core.Commands
         EditRedo,
         TestBuild,
         TestRun,
-        ToolsOptions,
         HelpAbout,
     }
 }

@@ -17,19 +17,16 @@ namespace PickleStudio.Core.Options
         public FontOptions TableFontOptions { get; set; }
         public FontOptions FeatureKeywordFontOptions { get; set; }
         public FontOptions StepKeywordFontOptions { get; set; }
-
         public bool WordWrap
         {
             get { return Get<bool>(); }
-            set { Set(value); } 
+            set { Set(value); }
         }
-
         public bool DisplayLineNumbers
         {
             get { return Get<bool>(); }
             set { Set(value); }
         }
-
         public bool DisplaySymbols
         {
             get { return Get<bool>(); }

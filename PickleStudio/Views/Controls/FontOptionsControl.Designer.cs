@@ -1,4 +1,4 @@
-﻿namespace PickleStudio.Controls
+﻿namespace PickleStudio.Views.Controls
 {
     partial class FontOptionsControl
     {
@@ -35,8 +35,8 @@
             this.lblFontWeight = new System.Windows.Forms.Label();
             this.lblTextColor = new System.Windows.Forms.Label();
             this.lblBackgroundColor = new System.Windows.Forms.Label();
-            this.txtTextColor = new System.Windows.Forms.TextBox();
-            this.txtBackgroundColor = new System.Windows.Forms.TextBox();
+            this.lblTextColorSelector = new System.Windows.Forms.Label();
+            this.lblBackgroundColorSelector = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // chkUnderline
@@ -103,30 +103,30 @@
             this.lblBackgroundColor.TabIndex = 6;
             this.lblBackgroundColor.Text = "Background:";
             // 
-            // txtTextColor
+            // lblTextColorSelector
             // 
-            this.txtTextColor.Location = new System.Drawing.Point(37, 0);
-            this.txtTextColor.Name = "txtTextColor";
-            this.txtTextColor.ReadOnly = true;
-            this.txtTextColor.Size = new System.Drawing.Size(100, 20);
-            this.txtTextColor.TabIndex = 7;
-            this.txtTextColor.Click += new System.EventHandler(this.txtTextColor_Click);
+            this.lblTextColorSelector.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTextColorSelector.Location = new System.Drawing.Point(37, 0);
+            this.lblTextColorSelector.Name = "lblTextColorSelector";
+            this.lblTextColorSelector.Size = new System.Drawing.Size(100, 20);
+            this.lblTextColorSelector.TabIndex = 9;
+            this.lblTextColorSelector.Click += new System.EventHandler(this.lblTextColorSelector_Click);
             // 
-            // txtBackgroundColor
+            // lblBackgroundColorSelector
             // 
-            this.txtBackgroundColor.Location = new System.Drawing.Point(217, 0);
-            this.txtBackgroundColor.Name = "txtBackgroundColor";
-            this.txtBackgroundColor.ReadOnly = true;
-            this.txtBackgroundColor.Size = new System.Drawing.Size(100, 20);
-            this.txtBackgroundColor.TabIndex = 8;
-            this.txtBackgroundColor.Click += new System.EventHandler(this.txtBackgroundColor_Click);
+            this.lblBackgroundColorSelector.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblBackgroundColorSelector.Location = new System.Drawing.Point(217, 0);
+            this.lblBackgroundColorSelector.Name = "lblBackgroundColorSelector";
+            this.lblBackgroundColorSelector.Size = new System.Drawing.Size(100, 20);
+            this.lblBackgroundColorSelector.TabIndex = 10;
+            this.lblBackgroundColorSelector.Click += new System.EventHandler(this.lblBackgroundColorSelector_Click);
             // 
-            // FontStyleControl
+            // FontOptionsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txtBackgroundColor);
-            this.Controls.Add(this.txtTextColor);
+            this.Controls.Add(this.lblBackgroundColorSelector);
+            this.Controls.Add(this.lblTextColorSelector);
             this.Controls.Add(this.lblBackgroundColor);
             this.Controls.Add(this.lblTextColor);
             this.Controls.Add(this.lblFontWeight);
@@ -136,7 +136,7 @@
             this.Controls.Add(this.chkUnderline);
             this.MaximumSize = new System.Drawing.Size(736, 21);
             this.MinimumSize = new System.Drawing.Size(736, 21);
-            this.Name = "FontStyleControl";
+            this.Name = "FontOptionsControl";
             this.Size = new System.Drawing.Size(736, 21);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -152,7 +152,7 @@
         private System.Windows.Forms.Label lblFontWeight;
         private System.Windows.Forms.Label lblTextColor;
         private System.Windows.Forms.Label lblBackgroundColor;
-        private System.Windows.Forms.TextBox txtTextColor;
-        private System.Windows.Forms.TextBox txtBackgroundColor;
+        private System.Windows.Forms.Label lblTextColorSelector;
+        private System.Windows.Forms.Label lblBackgroundColorSelector;
     }
 }

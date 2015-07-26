@@ -38,7 +38,6 @@ namespace PickleStudio.Commands
             }
 
             _state.Project.Open(fileName);
-
         }
     }
 }

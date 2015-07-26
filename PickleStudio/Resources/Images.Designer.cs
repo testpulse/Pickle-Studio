@@ -103,6 +103,16 @@ namespace PickleStudio.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EditorOptions {
+            get {
+                object obj = ResourceManager.GetObject("EditorOptions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EditorWordWrap {
             get {
                 object obj = ResourceManager.GetObject("EditorWordWrap", resourceCulture);
@@ -256,16 +266,6 @@ namespace PickleStudio.Resources {
         internal static System.Drawing.Bitmap TestSucces {
             get {
                 object obj = ResourceManager.GetObject("TestSucces", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ToolsOptions {
-            get {
-                object obj = ResourceManager.GetObject("ToolsOptions", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

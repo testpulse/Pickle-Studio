@@ -7,5 +7,6 @@ namespace PickleStudio.Core.Interfaces
     {
         bool Enabled { get; set; }
         void Execute(params string[] args);
+        void Sync();
     }
 }

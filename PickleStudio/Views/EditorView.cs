@@ -52,8 +52,7 @@ namespace PickleStudio.Views
 
         private void OnEditorSettingsChanged(object sender, PropertyChangedEventArgs e)
         {
-            // we could only set values when they changed but the obvious way requires magic strings.  It might be possible to use C# property name features instead.
-            ApplySettings();
+            ApplySettings(e.PropertyName);
         }
 
         private void OnTextChanged(object sender, EventArgs e)
@@ -94,22 +93,35 @@ namespace PickleStudio.Views
             _editor.Redo();
         }
 
-        public void ApplySettings()
+        public void ApplySettings(string propertyName = "")
         {
-            _editor.FontFamily = new FontFamily(_state.Settings.Editor.FontFamily);
-            _editor.FontSize = _state.Settings.Editor.FontSize.ToFontSize();
-            _editor.Background = new SolidColorBrush(_state.Settings.Editor.FontOptions.BackgroundColor);
-            _editor.Foreground = new SolidColorBrush(_state.Settings.Editor.FontOptions.TextColor);
-            _editor.FontWeight = _state.Settings.Editor.FontOptions.Weight;
-            _editor.FontStyle = _state.Settings.Editor.FontOptions.Style;
-            _editor.WordWrap = _state.Settings.Editor.WordWrap;
-            _editor.ShowLineNumbers = _state.Settings.Editor.DisplayLineNumbers;
-            var displaySymbols = _state.Settings.Editor.DisplaySymbols;
-            _editor.Options.ShowBoxForControlCharacters = displaySymbols;
-            _editor.Options.ShowTabs = displaySymbols;
-            _editor.Options.ShowSpaces = displaySymbols;
-            _editor.Options.ShowEndOfLine = displaySymbols;
-            _editor.SyntaxHighlighting = new GherkinHighlightingDefinition(_state.Settings.Editor);
+            var applyAll = string.IsNullOrEmpty(propertyName);
+            if (applyAll)
+            {
+                _editor.FontFamily = new FontFamily(_state.Settings.Editor.FontFamily);
+                _editor.FontSize = _state.Settings.Editor.FontSize.ToFontSize();
+                _editor.Background = new SolidColorBrush(_state.Settings.Editor.FontOptions.BackgroundColor);
+                _editor.Foreground = new SolidColorBrush(_state.Settings.Editor.FontOptions.TextColor);
+                _editor.FontWeight = _state.Settings.Editor.FontOptions.Weight;
+                _editor.FontStyle = _state.Settings.Editor.FontOptions.Style;
+                _editor.SyntaxHighlighting = new GherkinHighlightingDefinition(_state.Settings.Editor);
+            }
+            if (applyAll || propertyName == "WordWrap")
+            {
+                _editor.WordWrap = _state.Settings.Editor.WordWrap;
+            }
+            if (applyAll || propertyName == "DisplayLineNumbers")
+            {
+                _editor.ShowLineNumbers = _state.Settings.Editor.DisplayLineNumbers;
+            }
+            if (applyAll || propertyName == "DisplaySymbols")
+            {
+                var displaySymbols = _state.Settings.Editor.DisplaySymbols;
+                _editor.Options.ShowBoxForControlCharacters = displaySymbols;
+                _editor.Options.ShowTabs = displaySymbols;
+                _editor.Options.ShowSpaces = displaySymbols;
+                _editor.Options.ShowEndOfLine = displaySymbols;
+            }
         }
     }
 }

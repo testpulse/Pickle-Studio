@@ -56,8 +56,8 @@ namespace PickleStudio
             Command.EditorWordWrap.Register(new ToggleCommand(() => State.Settings.Editor.WordWrap, (a) => State.Settings.Editor.WordWrap = a, Strings.EditorWordWrapText, Images.EditorWordWrap, Strings.EditorWordWrapToolTipText));
             Command.EditorDisplayLineNumbers.Register(new ToggleCommand(() => State.Settings.Editor.DisplayLineNumbers, (a) => State.Settings.Editor.DisplayLineNumbers = a, Strings.EditorDisplayLineNumbersText, Images.EditorDisplayLineNumbers, Strings.EditorDisplayLineNumbersToolTipText));
             Command.EditorDisplaySymbols.Register(new ToggleCommand(() => State.Settings.Editor.DisplaySymbols, (a) => State.Settings.Editor.DisplaySymbols = a, Strings.EditorDisplaySymbolsText, Images.EditorDisplaySymbols, Strings.EditorDisplaySymbolsToolTipText));
-            Command.HelpAbout.Register(new DelegateCommand(() => new AboutView().ShowDialog(), Strings.HelpAboutText, Images.HelpAbout, Strings.HelpAboutToolTipText));
-            Command.ToolsOptions.Register(new DelegateCommand(() => new OptionsView().ShowDialog(), Strings.ToolsOptionsText, Images.ToolsOptions, Strings.ToolsOptionsToolTipText));
+            Command.EditorOptions.Register(new EditorOptionsCommand(State));
+            Command.HelpAbout.Register(new DelegateCommand(() => new AboutView().ShowDialog(), Strings.HelpAboutText, Images.HelpAbout, Strings.HelpAboutToolTipText));         
             Command.TestRun.Register(new TestRunCommand(State));
         }
 
@@ -87,8 +87,7 @@ namespace PickleStudio
             // build in opposite to desired order becauses it's a pain to re-arrange these things.  Need to revisit.
             tscMain
                 .AddToolStrip(CommandGroup.Help, Command.HelpAbout)
-                .AddToolStrip(CommandGroup.Tools, Command.ToolsOptions)
-                .AddToolStrip(CommandGroup.Editor, Command.EditorWordWrap, Command.EditorDisplayLineNumbers, Command.EditorDisplaySymbols)
+                .AddToolStrip(CommandGroup.Editor, Command.EditorWordWrap, Command.EditorDisplayLineNumbers, Command.EditorDisplaySymbols, Command.EditorOptions)
                 .AddToolStrip(CommandGroup.Edit, Command.EditCopy, Command.EditCut, Command.EditPaste, Command.None, Command.EditUndo, Command.EditRedo)
                 .AddToolStrip(CommandGroup.File, Command.FileOpen, Command.FileSave, Command.FileSaveAll, Command.FileClose);
         }
@@ -130,8 +129,6 @@ namespace PickleStudio
             {
                 Command.FileOpen.Execute(filePath);
             }
-
-            _editorView.ApplySettings();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
